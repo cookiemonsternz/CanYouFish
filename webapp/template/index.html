@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        <title>Can You Fish?</title>
+        <link rel="stylesheet" href="../static/output.css">
+    </head>
+    <body class="font-mono bg-gray-600">
+        <div id="app" class="flex items-center justify-center h-screen">
+            <div class="p-8 max w-md bg-cyan-50 shadow-lg rounded-lg">
+                <h1 class="bg-cyan-100 rounded-xl text-4xl font-bold text-center text-orange-500 hover:text-cyan-500 transition duration-700 ease-in-out">
+                    Can You Fish?
+                </h1>
+                <div id="container" class="mt-6 pt-0 pr-4 pl-4 pb-4">
+                    <video autoplay id="videoElement" class="rounded-xl border-4 border-stone-800 shadow-lg">
+
+                    </video>
+                </div>
+                <div class="mt-6 justify-self-center bg-cyan-200 rounded-xl border-8 border-cyan-200">
+                    <button id="photoButton">
+                        <img src="../images/camera.ico" alt="take picture" class="w-16 h-16 inline-block">
+                    </button>
+                </div>
+        </div>
+        <script src="../static/main.js"></script>
+    </body>
+</html>
