@@ -10,3 +10,19 @@ video {
 #photoButton {
     fill: #fff;
 }
+
+#isFishOverlay {
+    position:absolute;
+    z-index: 10;
+    top:45%;
+    left:30%;
+    transform: rotate(20deg);
+}
+
+#isNotFishOverlay {
+    position:absolute;
+    z-index: 10;
+    top:45%;
+    left:30%;
+    transform: rotate(-20deg);
+}

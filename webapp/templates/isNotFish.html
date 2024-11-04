@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        <title>Can You Fish?</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/output.css') }}">
+    </head>
+    <body class="font-mono bg-gray-600">
+        <div id="app" class="">
+            <div class="max w-md bg-cyan-50 shadow-lg rounded-lg items-center justify-self-center h-1/3 w-1/3 mt-16 p-2">
+                <h1 class="bg-cyan-100 rounded-xl text-4xl font-bold text-center m-4 p-4 text-orange-500 hover:text-cyan-500 transition duration-1000 ease-in-out">
+                    Can You Fish?
+                </h1>
+                <div id="container" class="mt-6 pt-0 pr-4 pl-4 mr-6 ml-6 h-full justify-self-center">
+                    <div id="isNotFishOverlay" class="bg-gray-600 rounded-xl p-4 drop-shadow-[0_15px_15px_rgba(0,0,0,1)]">
+                        <p id="isNotFishText" class="text-4xl font-bold text-center text-blue-500">
+                            Not Fish! - {{ prediction }}% confident
+                        </p>
+                    </div>
+                    <video autoplay id="videoElement" class="rounded-xl border-4 border-stone-800 shadow-lg blur-sm brightness-50"></video>
+                </div>
+                <div class="bg-cyan-50 pt-4 w-28 justify-self-center rounded-xl">
+                    <div class="justify-self-center bg-cyan-200 rounded-xl border-8 border-cyan-200 hover:bg-cyan-400 hover:border-cyan-400 transition duration-300 ease-in-out">
+                        <a href="/">
+                            <button id="photoButton">
+                                <img src="/static/images/home.ico" alt="take picture" class="w-16 h-16 inline-block">
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <script src="{{ url_for('static',filename='main.js') }}"></script>
+    </body>
+</html>

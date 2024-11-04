@@ -1,3 +1,4 @@
+
 var video = document.querySelector("#videoElement");
 
 if (navigator.mediaDevices.getUserMedia) {
@@ -8,4 +9,28 @@ if (navigator.mediaDevices.getUserMedia) {
     .catch(function (err0r) {
       console.log("Something went wrong!");
     });
+}
+
+function takeSnapshot() {
+  var canvas = document.getElementById('canvas');
+  var context = canvas.getContext('2d');
+  var video = document.getElementById('videoElement');
+  //console.log(`Taking snapshot: ${video.videoWidth} x ${video.videoHeight}`);
+  // ajax call to send image to server
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight
+  context.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
+  var dataURL = canvas.toDataURL('image/png');
+  console.log(dataURL);
+  $.ajax({
+    type: "POST",
+    url: "/",
+    data: {
+      imgBase64: dataURL
+    },
+    success: function (data) {
+      console.log(data);
+      window.location.href = data;
+    }
+  })
 }
