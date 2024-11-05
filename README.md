@@ -56,3 +56,11 @@ npx tailwindcss -i ./webapp/static/main.css -o ./webapp/static/styles/output.css
 ```
 
 You should now be able to edit the classes in html and have the css update.
+
+## Datasets 
+
+Human images -
+https://www.kaggle.com/datasets/ashwingupta3012/human-faces
+
+Fish images -
+https://www.kaggle.com/datasets/crowww/a-large-scale-fish-dataset
