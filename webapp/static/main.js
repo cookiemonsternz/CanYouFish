@@ -17,9 +17,9 @@ function takeSnapshot() {
   var video = document.getElementById('videoElement');
   //console.log(`Taking snapshot: ${video.videoWidth} x ${video.videoHeight}`);
   // ajax call to send image to server
-  canvas.width = video.videoWidth;
-  canvas.height = video.videoHeight
-  context.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
+  canvas.width = 100;
+  canvas.height = 100;
+  context.drawImage(video, 0, 0, width = 100, height = 100);
   var dataURL = canvas.toDataURL('image/png');
   console.log(dataURL);
   $.ajax({

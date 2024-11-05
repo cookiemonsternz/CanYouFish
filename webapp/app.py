@@ -42,7 +42,8 @@ def init():
             # go to /isNotFish
             return (url_for('isNotFish'))
             #return render_template('isNotFish.html')
-    model = load_model('C:/Users/chrsitpher/Documents/.Projects/CanYouFish/webapp/static/model/model.keras', compile=False)
+    model = load_model('./static/model/model.keras', compile=False)
+    #model = load_model('C:/Users/chrsitpher/Documents/.Projects/CanYouFish/webapp/static/model/model.h5')
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     #model.summary()
     return render_template('index.html')
@@ -69,7 +70,7 @@ def prepare_data(data):
     data = data.split(',')[1] # Remove the data:image/png;base64,
     image_data = base64.b64decode(data)
     image = Image.open(BytesIO(image_data))
-    #image.show()
+    image.show()
     image = image.resize((100,100))
     image = image.convert('RGB')
     return img_to_array(image)
