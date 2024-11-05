@@ -14,7 +14,7 @@ I developed _Can You Fish_ as an excercise in creation and deployment of keras m
 of fish and people using the datasets linked at the bottom of the page. Following this, I built a simple flask app to contain it (A framework I have never previously used)
 and then attempted to deploy it. 
 
-My first attempt was to deploy using Google Cloud App Engine, but I didn't have a credit card with which to instantiate a 
+My first attempt was to deploy using Google Cloud App Engine, but I didn't have a credit card with which to initiate a 
 free trial. I then tried to deploy using Microsoft Azure, but found it extremely difficult. I tried three other hosting solutions, each with varying challenges,
 from rebuilding my model in older versions of python to locally hosting xmhttp servers. 
 
